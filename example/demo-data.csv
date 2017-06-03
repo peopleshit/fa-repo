@@ -1,3 +1,3 @@
-name;repo;group
-Mike Beecher;https://github.com/example/example.git;100
-Alice Jackson;https://my-awesome-git-service.com/my-repo.git;101
+name,repo,group
+Mike Beecher,https://github.com/example/example.git,100
+Alice Jackson,https://my-awesome-git-service.com/my-repo.git,101
