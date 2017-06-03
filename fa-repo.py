@@ -51,7 +51,10 @@ class Repository:
             path = self.directory + "/" + entry.group + "/" + entry.name
             if not os.path.exists(path):
                 os.makedirs(path)
-            repository = Repo.clone_from(entry.repo, path)
+                Repo.clone_from(entry.repo, path)
+                print(entry.group + " " + entry.name + " repo cloned")
+            else:
+                print(entry.group + " " + entry.name + " skipping, already exists")
 
 
 if __name__ == '__main__':
