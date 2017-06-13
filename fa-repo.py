@@ -16,6 +16,10 @@ class Entry:
             return 0
         return 1
 
+    def not_null(self):
+        if not (self.repo == None or self.name == None or self.group == None):
+            return 1;
+        return 0;
 
 class CsvParser:
 
@@ -29,7 +33,7 @@ class CsvParser:
             first_line = 1
             for row in reader:
                 entity = Entry(row['name'], row['repo'], row['group'])
-                if entity.has_repo() and first_line == 0:
+                if entity.has_repo() and first_line == 0 and entity.not_null():
                     data.append(entity)
                 if first_line == 1:
                     first_line = 0
